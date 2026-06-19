@@ -1,0 +1,12 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*~
+
+# never commit a local campaign export
+nemesis-campaign.json
+
+# temp asset review folder
+assets/generated/_review/

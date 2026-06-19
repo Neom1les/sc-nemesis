@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NEMESIS — GM Console</title>
+<meta name="robots" content="noindex" />
+<link rel="icon" type="image/webp" href="../assets/img/nemesis-logo.webp" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Saira:wght@300;400;500;600;700;800&family=Saira+Condensed:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/console.css" />
+</head>
+<body>
+
+<div class="fx-grain" aria-hidden="true"></div>
+<div class="fx-scan" aria-hidden="true"></div>
+
+<!-- BOOT -->
+<div class="boot" id="boot">
+  <div class="boot__in">
+    <img src="../assets/img/nemesis-logo.webp" alt="" class="boot__logo" />
+    <div class="boot__title">NEMESIS COMMAND</div>
+    <div class="boot__bar"><span id="bootFill"></span></div>
+    <div class="boot__log" id="bootLog">// MOUNTING CAMPAIGN LEDGER</div>
+  </div>
+</div>
+
+<!-- TOP BAR -->
+<header class="top" id="top">
+  <a class="brand" href="../index.html" title="Back to site">
+    <img src="../assets/img/nemesis-logo.webp" alt="NEMESIS" />
+    <span>GM&nbsp;CONSOLE</span>
+  </a>
+
+  <div class="turnbox">
+    <div class="turnbox__turn"><span class="lbl">TURN</span><b id="turnNum">1</b></div>
+    <div class="turnbox__phase" id="phaseChip"><span class="lbl">PHASE</span><b id="phaseNum">1 · MAP UPDATE</b></div>
+  </div>
+
+  <div class="wallets" id="wallets"></div>
+
+  <div class="seatbar">
+    <span class="seatbar__lbl">SEAT</span>
+    <div class="seatbar__btns" id="seatBtns"></div>
+  </div>
+
+  <div class="sys">
+    <button class="ic" id="btnExport" title="Export campaign JSON">⤓</button>
+    <button class="ic" id="btnImport" title="Import campaign JSON">⤒</button>
+    <button class="ic danger" id="btnReset" title="Reset campaign">⟲</button>
+    <input type="file" id="fileImport" accept="application/json" hidden />
+  </div>
+</header>
+
+<!-- LAYOUT -->
+<div class="shell">
+  <nav class="nav" id="nav"></nav>
+  <main class="view" id="view"></main>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal" hidden><div class="modal__box" id="modalBox"></div></div>
+
+<!-- TOAST -->
+<div class="toast" id="toast" hidden></div>
+
+<script src="js/game-data.js"></script>
+<script src="js/state.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

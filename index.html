@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NEMESIS // Clandestine Operations — A Star Citizen Org</title>
+<meta name="description" content="NEMESIS — an elite Star Citizen clan operating in the dark between systems. Forged against the Legion. Recruitment open. Enlist now." />
+
+<!-- Open Graph -->
+<meta property="og:title" content="NEMESIS // Clandestine Operations" />
+<meta property="og:description" content="Born human. Forged in the dark. Returned as something more. An elite Star Citizen org. Recruitment open." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/generated/hero-b.jpg" />
+
+<link rel="icon" type="image/webp" href="assets/img/nemesis-logo.webp" />
+
+<!-- Fonts: Saira (body) + Share Tech Mono (HUD). Zebulon (brand) loaded via @font-face in CSS -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Saira+Condensed:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============ GRAIN + SCANLINE OVERLAY ============ -->
+<div class="fx-grain" aria-hidden="true"></div>
+<div class="fx-scanlines" aria-hidden="true"></div>
+<div class="fx-vignette" aria-hidden="true"></div>
+
+<!-- ============ BOOT / PRELOADER ============ -->
+<div class="boot" id="boot" aria-hidden="true">
+  <div class="boot__inner">
+    <img src="assets/img/nemesis-logo.webp" alt="" class="boot__logo" />
+    <div class="boot__bar"><span class="boot__fill" id="bootFill"></span></div>
+    <div class="boot__log" id="bootLog">
+      <span>// ESTABLISHING SECURE UPLINK</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a href="#top" class="nav__brand" aria-label="NEMESIS home">
+    <img src="assets/img/nemesis-logo.webp" alt="NEMESIS" class="nav__mark" />
+    <span class="nav__word">NEMESIS</span>
+  </a>
+  <nav class="nav__links" id="navLinks">
+    <a href="#campaign" data-i="01">Campaign</a>
+    <a href="#factions" data-i="02">Factions</a>
+    <a href="#operation" data-i="03">Operation</a>
+    <a href="#arsenal" data-i="04">Arsenal</a>
+    <a href="#enlist" class="nav__cta">Enlist<span class="nav__cta-arrow">→</span></a>
+  </nav>
+  <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero__bg" id="heroBg" data-parallax>
+    <!-- Higgsfield cinematic loops (seedance 21:9), crossfading -->
+    <video class="hero__video is-active" id="heroVidA" autoplay muted loop playsinline preload="auto" poster="assets/generated/hero-b.jpg">
+      <source src="assets/generated/hero-loop-a.mp4" type="video/mp4" />
+    </video>
+    <video class="hero__video" id="heroVidB" autoplay muted loop playsinline preload="auto" poster="assets/generated/hero-b.jpg">
+      <source src="assets/generated/hero-loop-b.mp4" type="video/mp4" />
+    </video>
+    <img src="assets/generated/hero-b.jpg" alt="" id="heroImg" class="hero__fallback" />
+  </div>
+  <div class="hero__grade"></div>
+
+  <!-- HUD frame -->
+  <div class="hud-frame" aria-hidden="true">
+    <span class="hud-corner tl"></span><span class="hud-corner tr"></span>
+    <span class="hud-corner bl"></span><span class="hud-corner br"></span>
+  </div>
+
+  <div class="hero__content">
+    <div class="hero__kicker reveal">
+      <span class="dot"></span> STANTON SYSTEM &nbsp;//&nbsp; HURSTON &nbsp;//&nbsp; STATUS: <em>ACTIVE</em>
+    </div>
+    <h1 class="hero__title">
+      <span class="reveal" style="--d:.05s">NE</span><span class="reveal glitch" data-text="ME" style="--d:.12s">ME</span><span class="reveal" style="--d:.19s">SIS</span>
+    </h1>
+    <p class="hero__tagline reveal" style="--d:.3s">
+      Born human. Forged in the dark. <span class="amber">Returned as something more.</span>
+    </p>
+    <p class="hero__sub reveal" style="--d:.4s">
+      An elite clandestine organization operating in the unclaimed black of the 'verse —
+      hunting the Legion across the systems they thought they owned.
+    </p>
+    <div class="hero__actions reveal" style="--d:.5s">
+      <a href="#enlist" class="btn btn--primary">
+        <span>Enlist Now</span>
+        <svg viewBox="0 0 24 24" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="square"/></svg>
+      </a>
+      <a href="#campaign" class="btn btn--ghost"><span>Read the Dossier</span></a>
+    </div>
+  </div>
+
+  <a href="#campaign" class="hero__scroll" aria-label="Scroll">
+    <span class="hero__scroll-line"></span>
+    <span class="hero__scroll-txt">SCROLL</span>
+  </a>
+</section>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track">
+    <span>RECRUITMENT OPEN</span><span class="sep">/////</span>
+    <span>OPERATION: W4R-BOT — ACTIVE</span><span class="sep">/////</span>
+    <span>NEMESIS PROTOCOL ENGAGED</span><span class="sep">/////</span>
+    <span>THE LEGION ADVANCES ON HURSTON</span><span class="sep">/////</span>
+    <span>UNLIMITED RESPAWN // CYBERNETIC RESILIENCE</span><span class="sep">/////</span>
+    <span>RECRUITMENT OPEN</span><span class="sep">/////</span>
+    <span>OPERATION: W4R-BOT — ACTIVE</span><span class="sep">/////</span>
+    <span>NEMESIS PROTOCOL ENGAGED</span><span class="sep">/////</span>
+    <span>THE LEGION ADVANCES ON HURSTON</span><span class="sep">/////</span>
+    <span>UNLIMITED RESPAWN // CYBERNETIC RESILIENCE</span><span class="sep">/////</span>
+  </div>
+</div>
+
+<!-- ============ CAMPAIGN TEASER (DOSSIER) ============ -->
+<section class="campaign" id="campaign">
+  <div class="section-head reveal">
+    <span class="eyebrow"><span class="eyebrow__no">01</span> Classified Dossier</span>
+    <h2 class="section-title">The <span class="amber">Hollow</span> Between</h2>
+  </div>
+
+  <div class="campaign__grid">
+    <figure class="campaign__media reveal">
+      <img src="assets/img/story-cine-02.jpg" alt="Subject recovery — UEE medical bay" />
+      <figcaption><span class="tag tag--alert">SUBJECT RECOVERED</span> MEDBAY FEED · 02:10 SET</figcaption>
+      <span class="scan"></span>
+    </figure>
+
+    <div class="campaign__text reveal" style="--d:.15s">
+      <p class="lead">
+        Recovered from the wreck of a Vanduul transport: a single survivor. Augmented.
+        Filed only as <span class="amber">SUBJECT ZERO</span>.
+      </p>
+      <p>
+        UEE intelligence <em>suspects</em> — but will not confirm — that the subject is the
+        officer declared lost with the Idris-class frigate <span class="amber">Anesidora</span>.
+        What little is certain: he walked out of a Vanduul prison <em>enhanced</em> — and what
+        he did to get there is <span class="redacted">[ DATA EXPUNGED ]</span>.
+      </p>
+      <p>
+        The augmentation. The escape. The ghost squadron that pulled him from the dark.
+        All of it remains <span class="redacted">classified beyond reconstruction</span>.
+      </p>
+      <p class="campaign__sign">
+        — Full record sealed. <span class="amber">Security Clearance: BLACK required.</span>
+      </p>
+      <div class="fragments">
+        <span class="frag">FRAGMENT I · The Hollow Between</span>
+        <span class="frag">FRAGMENT II · Extraction</span>
+        <span class="frag locked">FRAGMENT III · Static <i>🔒</i></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FACTIONS ============ -->
+<section class="factions" id="factions">
+  <div class="section-head reveal">
+    <span class="eyebrow"><span class="eyebrow__no">02</span> Order of Battle</span>
+    <h2 class="section-title">Two Forces. <span class="amber">One Verse.</span></h2>
+  </div>
+
+  <div class="factions__grid">
+    <article class="faction faction--nemesis reveal">
+      <div class="faction__bg" style="background-image:url('assets/img/story-goingdark.jpg')"></div>
+      <div class="faction__inner">
+        <img src="assets/img/nemesis-logo.webp" alt="" class="faction__logo" />
+        <span class="faction__type">PROTAGONIST FORCE</span>
+        <h3 class="faction__name">NEMESIS</h3>
+        <p class="faction__desc">
+          The last coordinated resistance. Enhanced operatives carrying remnants of the
+          Nemesis augmentation tech — capable of standing against impossible odds, if they
+          hold the line together.
+        </p>
+        <ul class="faction__traits">
+          <li><b>Cybernetic Resilience</b> — enhanced units respawn without limit</li>
+          <li><b>Shadow Recall</b> — rewrite the cost of a single failure</li>
+        </ul>
+      </div>
+    </article>
+
+    <div class="factions__vs" aria-hidden="true"><span>VS</span></div>
+
+    <article class="faction faction--legion reveal" style="--d:.12s">
+      <div class="faction__bg" style="background-image:url('assets/img/story-cine-03.jpg')"></div>
+      <div class="faction__inner">
+        <img src="assets/img/legion-logo.webp" alt="" class="faction__logo" />
+        <span class="faction__type faction__type--threat">PRIMARY THREAT</span>
+        <h3 class="faction__name">THE LEGION</h3>
+        <p class="faction__desc">
+          Entropy made manifest. Corrupted AIs, rogue cells and ex-military ghosts bound to
+          a directive no one has ever decoded. They expand. They consume. They grow stronger
+          with every fight they pick.
+        </p>
+        <ul class="faction__traits">
+          <li><b>Corruption Spread</b> — territory feeds their war machine</li>
+          <li><b>Data Leech</b> — they take what you build and turn it dark</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ THE OPERATION ============ -->
+<section class="operation" id="operation">
+  <div class="operation__bg" style="background-image:url('assets/img/story-cine-04.jpg')" data-parallax></div>
+  <div class="operation__veil"></div>
+  <div class="operation__content">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="eyebrow__no">03</span> How We Operate</span>
+      <h2 class="section-title">Not a guild. <span class="amber">A war machine.</span></h2>
+      <p class="section-lead reveal" style="--d:.1s">
+        NEMESIS runs a living campaign that fuses tabletop strategy with live operations
+        inside Star Citizen. Decisions made in the war room become missions flown in the 'verse.
+      </p>
+    </div>
+
+    <div class="ops-grid">
+      <article class="op reveal" style="--d:.05s">
+        <span class="op__no">/01</span>
+        <h3>Strategic Layer</h3>
+        <p>Commanders fight an offline meta-game — territory, resources, intel and card-driven operations that shape what happens next.</p>
+      </article>
+      <article class="op reveal" style="--d:.12s">
+        <span class="op__no">/02</span>
+        <h3>Live Operations</h3>
+        <p>Briefings become real missions in Star Citizen: boarding actions, sabotage, fleet assaults and extractions flown by the org.</p>
+      </article>
+      <article class="op reveal" style="--d:.19s">
+        <span class="op__no">/03</span>
+        <h3>Persistent Campaign</h3>
+        <p>A living map of contested systems. Every win and loss moves the front line. The story remembers what you did.</p>
+      </article>
+      <article class="op reveal" style="--d:.26s">
+        <span class="op__no">/04</span>
+        <h3>The Armory</h3>
+        <p>Spend resources, influence and intel on tactical cards and classified tech unlocked only through the campaign.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ARSENAL (CARDS) ============ -->
+<section class="arsenal" id="arsenal">
+  <div class="section-head reveal">
+    <span class="eyebrow"><span class="eyebrow__no">04</span> The Armory</span>
+    <h2 class="section-title">Tactical <span class="amber">Cards</span></h2>
+    <p class="section-lead reveal" style="--d:.1s">A glimpse at the deck. Played on the strategic layer — felt on the battlefield.</p>
+  </div>
+
+  <div class="coverflow reveal" id="coverflow" role="group" aria-label="Tactical card carousel" style="--d:.15s">
+    <button class="cf-nav cf-prev" id="cfPrev" aria-label="Previous card">‹</button>
+    <div class="cf-stage" id="cfStage">
+      <figure class="cf-card"><img src="assets/cards/FEAR_T01001.jpg" alt="F.E.A.R." draggable="false" /></figure>
+      <figure class="cf-card"><img src="assets/cards/PiercingStrike_T01006.jpg" alt="Piercing Strike" draggable="false" /></figure>
+      <figure class="cf-card"><img src="assets/cards/NoEscape_T01003.jpg" alt="No Escape" draggable="false" /></figure>
+      <figure class="cf-card"><img src="assets/cards/NemesisDropship_UnitDeployment.jpg" alt="Nemesis Dropship" draggable="false" /></figure>
+      <figure class="cf-card"><img src="assets/cards/GhostTap_IntelDeception.jpg" alt="Ghost Tap" draggable="false" /></figure>
+    </div>
+    <button class="cf-nav cf-next" id="cfNext" aria-label="Next card">›</button>
+    <div class="cf-dots" id="cfDots" aria-hidden="true"></div>
+  </div>
+  <p class="arsenal__hint" aria-hidden="true">↤ &nbsp; DRAG · SWIPE · CLICK &nbsp; ↦</p>
+</section>
+
+<!-- ============ ENLIST ============ -->
+<section class="enlist" id="enlist">
+  <div class="enlist__grid">
+    <div class="enlist__intro reveal">
+      <span class="eyebrow"><span class="eyebrow__no">05</span> Recruitment</span>
+      <h2 class="section-title">Step into <span class="amber">the dark.</span></h2>
+      <p class="section-lead">
+        We don't recruit numbers. We recruit operatives. If you fly with intent and you want
+        a campaign that actually means something — this is your uplink.
+      </p>
+
+      <ul class="reqs">
+        <li><span class="reqs__k">// PROFILE</span> Star Citizen account · mic · Discord</li>
+        <li><span class="reqs__k">// CONDUCT</span> Show up. Hold the line. No drama.</li>
+        <li><span class="reqs__k">// ROLE</span> Pilot · Infiltrator · Assault · Support</li>
+        <li><span class="reqs__k">// RANK</span> Earned in the campaign, not bought</li>
+      </ul>
+
+      <div class="roster" id="roster">
+        <div class="roster__cell"><span class="num" data-count="48">0</span><span class="lbl">Operatives</span></div>
+        <div class="roster__cell"><span class="num" data-count="12">0</span><span class="lbl">Operations Run</span></div>
+        <div class="roster__cell"><span class="num" data-count="3">0</span><span class="lbl">Systems Active</span></div>
+        <div class="roster__cell"><span class="num" data-count="1" data-suffix="×">0</span><span class="lbl">Polaris Capital</span></div>
+      </div>
+    </div>
+
+    <aside class="terminal reveal" style="--d:.15s" aria-label="Join NEMESIS">
+      <div class="terminal__bar">
+        <span class="terminal__dot"></span><span class="terminal__dot"></span><span class="terminal__dot"></span>
+        <span class="terminal__title">recruitment.nemesis // uplink</span>
+      </div>
+      <div class="terminal__body">
+        <p class="terminal__line"><span class="prompt">&gt;</span> initializing enlistment sequence<span class="cur">_</span></p>
+        <p class="terminal__line dim">&gt; clearance level: APPLICANT</p>
+        <p class="terminal__line dim">&gt; select a channel to proceed:</p>
+
+        <a class="join-btn join-btn--discord" id="joinDiscord" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M20 4.4A19 19 0 0 0 15.3 3l-.3.5a14 14 0 0 1 4 2 16 16 0 0 0-13.9 0 14 14 0 0 1 4-2L8.7 3A19 19 0 0 0 4 4.4 20 20 0 0 0 .5 18a19 19 0 0 0 5.8 3l.8-1.4c-.9-.3-1.7-.7-2.5-1.2l.6-.4a13.6 13.6 0 0 0 11.6 0l.6.4c-.8.5-1.6.9-2.5 1.2l.8 1.4a19 19 0 0 0 5.8-3A20 20 0 0 0 20 4.4ZM8.3 14.7c-1.1 0-2-1-2-2.3s.9-2.3 2-2.3 2 1 2 2.3-.9 2.3-2 2.3Zm7.4 0c-1.1 0-2-1-2-2.3s.9-2.3 2-2.3 2 1 2 2.3-.9 2.3-2 2.3Z"/></svg>
+          <span class="join-btn__txt"><b>Join the Discord</b><i>Primary uplink · briefings & comms</i></span>
+          <span class="join-btn__go">→</span>
+        </a>
+
+        <a class="join-btn join-btn--rsi" id="joinRsi" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M3 12 12 3l9 9-9 9-9-9Zm9-5.6L6.4 12 12 17.6 17.6 12 12 6.4Z"/></svg>
+          <span class="join-btn__txt"><b>RSI Spectrum Org</b><i>Apply to the organization</i></span>
+          <span class="join-btn__go">→</span>
+        </a>
+
+        <p class="terminal__line dim small">&gt; secure comms · operative handle: <span class="amber">SUBJECT ZERO</span></p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer__top">
+    <a href="#top" class="footer__brand">
+      <img src="assets/img/nemesis-logo.webp" alt="" />
+      <span>NEMESIS</span>
+    </a>
+    <nav class="footer__nav">
+      <a href="#campaign">Campaign</a>
+      <a href="#factions">Factions</a>
+      <a href="#operation">Operation</a>
+      <a href="#arsenal">Arsenal</a>
+      <a href="#enlist">Enlist</a>
+    </nav>
+  </div>
+  <p class="footer__tag">“ May your choices echo across systems. ”</p>
+  <div class="footer__legal">
+    <p>
+      NEMESIS is an unofficial, fan-made Star Citizen organization. This site is not affiliated
+      with, endorsed, sponsored or approved by Cloud Imperium Rights LLC / Cloud Imperium Rights Ltd.
+      Star Citizen® and Squadron 42® are trademarks of Cloud Imperium Rights.
+    </p>
+    <p>© 2945 NEMESIS COMMAND · Made by the community.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
