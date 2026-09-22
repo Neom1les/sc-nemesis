@@ -427,6 +427,8 @@ section { position: relative; scroll-margin-top: 80px; }
 .terminal__line { font-family: var(--font-mono); font-size: .82rem; color: var(--ink); margin-bottom: .5rem; }
 .terminal__line.dim { color: var(--ink-faint); }
 .terminal__line.small { font-size: .74rem; margin-top: 1rem; }
+.terminal__line.small + .terminal__line.small { margin-top: .3rem; }
+.join-btn.is-pending { opacity: .55; }
 .terminal__line .prompt { color: var(--amber); }
 .cur { color: var(--amber); animation: blink 1s steps(2) infinite; }
 

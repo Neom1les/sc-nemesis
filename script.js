@@ -6,8 +6,8 @@
    │  EDIT YOUR JOIN LINKS HERE — replace the two URLs below.   │
    └──────────────────────────────────────────────────────────┘ */
 const NEMESIS_CONFIG = {
-  discordInvite: "https://discord.gg/CHANGE-ME",                       // ← your Discord invite
-  rsiOrgUrl:     "https://robertsspaceindustries.com/orgs/CHANGE-ME",  // ← your RSI Spectrum org
+  discordInvite: "https://discord.gg/CHANGE-ME",                        // ← Discord invite (pending)
+  rsiOrgUrl:     "https://robertsspaceindustries.com/en/orgs/N3M3S1S", // RSI Spectrum org (SID N3M3S1S)
 };
 
 (() => {
@@ -32,7 +32,10 @@ const NEMESIS_CONFIG = {
     const live = url && !/CHANGE-ME/.test(url);
     el.href = live ? url : "#enlist";
     if (!live) {
-      el.title = "Set this link in script.js → NEMESIS_CONFIG";
+      el.classList.add("is-pending");
+      el.title = "Uplink pending — apply via RSI Spectrum for now";
+      const sub = el.querySelector(".join-btn__txt i");
+      if (sub) sub.textContent = "Uplink pending · apply via RSI Spectrum";
       el.addEventListener("click", (e) => {
         if (!live) { e.preventDefault();
           el.classList.add("shake");

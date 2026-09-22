@@ -10,7 +10,11 @@ Static, client-side, no build step — same approach as the SC Loadout Optimizer
 Cinematic single-page site (Hero video, campaign teaser, factions, the operation, tactical
 cards carousel, enlist). Dark gunmetal + molten-amber, Zebulon display font, HUD aesthetic.
 
-⚙️ **Set your join links:** edit `script.js` → `NEMESIS_CONFIG` (Discord invite + RSI org URL).
+Join links live in `script.js` → `NEMESIS_CONFIG`. RSI org: https://robertsspaceindustries.com/en/orgs/N3M3S1S (SID `N3M3S1S`).
+Discord invite is still a placeholder — the button shows "uplink pending" until it is set.
+
+Content last verified against **Star Citizen Alpha 4.10.1 LIVE** (September 2026): Stanton, Pyro and Nyx open.
+Sister project: [SC Central](https://neom1les.github.io/sc-central/) (toolkit, links back to the org).
 
 ## GM Console (`/console/`)
 A client-side campaign console for the NEMESIS meta-game — drives the full 8-phase turn loop:
