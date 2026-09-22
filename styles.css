@@ -497,3 +497,22 @@ section { position: relative; scroll-margin-top: 80px; }
 @media (max-width: 420px){
   .footer__legal { flex-direction: column; }
 }
+
+/* ---------- Verse Sitrep ---------- */
+.sitrep { padding: clamp(5rem,10vw,9rem) 0; background: var(--bg-deep); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.sitrep__list { list-style: none; max-width: var(--maxw); margin: 3rem auto 0; padding: 0 var(--gut); display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.sitrep__row { display: grid; grid-template-columns: 5.2rem 5.2rem 1fr; gap: 1.2rem; align-items: start; background: var(--bg); padding: 1.2rem 1.4rem; transition: background .4s var(--ease); }
+.sitrep__row:hover { background: var(--surface); }
+.sitrep__tag { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .16em; padding: .3em .55em; text-align: center; border: 1px solid var(--line-2); color: var(--ink-dim); margin-top: .2rem; }
+.sitrep__tag--live { color: var(--amber); border-color: var(--amber-deep); box-shadow: 0 0 12px var(--amber-glow); }
+.sitrep__tag--ops { color: var(--ink); }
+.sitrep__tag--event { color: var(--crimson); border-color: var(--crimson); }
+.sitrep__tag--next { color: var(--ink-faint); border-style: dashed; }
+.sitrep__date { font-family: var(--font-mono); font-size: .78rem; letter-spacing: .1em; color: var(--amber); margin-top: .35rem; white-space: nowrap; }
+.sitrep__body b { display: block; font-family: var(--font-cond); font-weight: 700; text-transform: uppercase; letter-spacing: .04em; font-size: 1.05rem; color: var(--ink); }
+.sitrep__body p { color: var(--ink-dim); font-size: .92rem; margin-top: .3rem; line-height: 1.55; }
+.sitrep__src { max-width: var(--maxw); margin: 1.2rem auto 0; padding: 0 var(--gut); font-family: var(--font-mono); font-size: .68rem; letter-spacing: .1em; color: var(--ink-faint); }
+@media (max-width: 640px) {
+  .sitrep__row { grid-template-columns: auto 1fr; }
+  .sitrep__body { grid-column: 1 / -1; }
+}

@@ -7,8 +7,8 @@ Static, client-side, no build step — same approach as the SC Loadout Optimizer
 - **GM Console:** https://neom1les.github.io/sc-nemesis/console/
 
 ## Recruitment site
-Cinematic single-page site (Hero video, campaign teaser, factions, the operation, tactical
-cards carousel, enlist). Dark gunmetal + molten-amber, Zebulon display font, HUD aesthetic.
+Cinematic single-page site (Hero video, campaign teaser, factions, the operation, **Verse Sitrep**
+(dated state-of-the-game block, refresh on each patch), tactical cards carousel, enlist). Dark gunmetal + molten-amber, Zebulon display font, HUD aesthetic.
 
 Join links live in `script.js` → `NEMESIS_CONFIG`. RSI org: https://robertsspaceindustries.com/en/orgs/N3M3S1S (SID `N3M3S1S`).
 Discord invite is still a placeholder — the button shows "uplink pending" until it is set.
